@@ -34,13 +34,13 @@ function validateAndGetFormData() {
 
     var schAddressVar = $("#schAddress").val();
     if (schAddressVar === "") {
-        alert("Employee deduction amount is Required Value");
+        alert("Address is Required");
         $("#schAddress").focus();
         return "";
     }
     var schEnrollVar = $("#schEnroll").val();
     if (schEnrollVar === "") {
-        alert("Employee deduction amount is Required Value");
+        alert("Enrollment date is Required");
         $("#schEnroll").focus();
         return "";
     }
