@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JPDB</title>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+    <!--
+      To change this license header, choose License Headers in Project Properties.
+      To change this template file, choose Tools | Templates
+      and open the template in the editor.
+    -->
+    <html lang="en">
+      <head>
+        <title>MICRO Project</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="http://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+        <script src="./powerDB.js"></script>
+      </head>
+
+      <body>
+        <div class="container">
+          <h2>Student Enrollment form</h2>
+          <form id="SchoolForm" method="post">
+            <div class="form-group">
+              <span>
+                <label for="schRollNo">Roll-No:</label>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                name="RollNo"
+                id="schRollNo"
+                placeholder="Enter Roll-No"
+                onchange="getEmp()"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="schFullName">Full-Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="schFullName"
+                placeholder="Enter FullName"
+                name="fullName"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="Birth-Date">Birth-Date</label>
+              <input
+                type="text"
+                class="form-control"
+                id="schBirthDate"
+                placeholder="Enter Birth-Date"
+                name="Class"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="schAddress">Address:</label>
+              <input
+                class="form-control"
+                type="text"
+                id="schAddress"
+                placeholder="Enter Address"
+                name="address"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="schEnroll">Enrollment-Date:</label>
+              <input
+                class="form-control"
+                type="text"
+                id="schEnroll"
+                placeholder="Enter Enrollment-Date"
+                name="enrollment"
+                required
+              />
+            </div>
+
+            <!-- savebutton -->
+            <input
+              style="
+                display: inline-block;
+                position: relative;
+                left: 30vw;
+                margin-top: 30px;
+                padding: 15px 25px 15px 25px;
+              "
+              type="button"
+              class="btn btn-primary"
+              id="empSave"
+              value="Save"
+              onclick="saveEmployeeData();"
+              disabled
+            />
+            <!-- changebutton -->
+            <input
+              style="
+                display: inline-block;
+                position: relative;
+                left: 30vw;
+                margin-top: 30px;
+                padding: 15px 25px 15px 25px;
+              "
+              type="button"
+              class="btn btn-primary"
+              id="empChange"
+              value="Change"
+              onclick="changeData();"
+              disabled
+            />
+            <!-- resetbutton -->
+            <input
+              style="
+                display: inline-block;
+                position: relative;
+                left: 30vw;
+                margin-top: 30px;
+                padding: 15px 25px 15px 25px;
+              "
+              type="button"
+              class="btn btn-danger"
+              id="empReset"
+              value="Reset"
+              onclick="resetForm()"
+              disabled
+            />
+          </form>
+        </div>
+      </body>
+    </html>
+  </body>
+</html>
